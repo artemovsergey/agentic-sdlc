@@ -1,7 +1,7 @@
 # Курс «Agentic SDLC»: дизайн
 
 - Дата: 2026-11-10
-- Статус: на согласовании
+- Статус: утверждён 2026-11-10
 - Источник: [ai.khakhalev.com/course](https://ai.khakhalev.com/course/) (Foundation + Advanced)
   и [roadmap Agentic SDLC](https://ai.khakhalev.com/roadmap/)
 - Для кого: личный курс автора, не продукт для студентов и не коммерческий курс
