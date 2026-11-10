@@ -38,6 +38,12 @@ for week in course/week-*; do
   if [[ -f "$week/lecture.md" ]]; then
     words=$(wc -w < "$week/lecture.md")
     (( words >= 1200 && words <= 1800 )) || fail "$name/lecture.md: $words слов, нужно 1200–1800"
+    grep -q '^## .*Разобранный пример' "$week/lecture.md" || fail "$name/lecture.md: нет разобранного примера с ожидаемым выводом"
+  fi
+  if [[ -f "$week/practice.md" ]]; then
+    if grep -qE '^[[:space:]]*cd CollegeLMS\.Next &&' "$week/practice.md"; then
+      fail "$name/practice.md: cd CollegeLMS.Next без подоболочки — блок не скопируется целиком"
+    fi
   fi
   if [[ -f "$week/self-check.md" ]]; then
     q=$(grep -cE '^### [0-9]+\.' "$week/self-check.md" || true)
@@ -45,8 +51,21 @@ for week in course/week-*; do
   fi
   if [[ -f "$week/results.md" ]]; then
     grep -q '^## Артефакт' "$week/results.md" || fail "$name/results.md: нет раздела «Артефакт»"
+    grep -q 'Фактическая команда' "$week/results.md" || fail "$name/results.md: в журнале нет фактической команды"
+    grep -q 'cwd' "$week/results.md" || fail "$name/results.md: в журнале нет рабочего каталога"
   fi
 done
+
+if [[ -f course/week-01/practice.md ]]; then
+  grep -q 'Резервный сценарий' course/week-01/practice.md || fail "week-01/practice.md: нет готового резервного сценария"
+fi
+
+if [[ -f course/week-02/practice.md ]]; then
+  grep -q 'повторн' course/week-02/practice.md || fail "week-02/practice.md: нет обязательного повторного прогона"
+  grep -q 'зелён' course/week-02/practice.md || fail "week-02/practice.md: нет критерия зелёного прогона"
+  grep -q 'изолированн' course/week-02/practice.md || fail "week-02/practice.md: нет требования изолированного стенда для E2E"
+  grep -q 'не запускался' course/week-02/practice.md || fail "week-02/practice.md: нет допустимой записи «не запускался»"
+fi
 
 if grep -rInE 'TBD|TODO|FIXME' course --include='*.md' | grep -v '_template'; then
   fail "в материалах остались TBD/TODO/FIXME"

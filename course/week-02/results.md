@@ -26,14 +26,16 @@
 
 ## Журнал проверок
 
-| Команда | Код возврата | Итог |
-|---|---|---|
-| `dotnet build CollegeLMS.slnx` |  |  |
-| `dotnet csharpier check .` |  |  |
-| `dotnet test CollegeLMS.slnx --filter FullyQualifiedName~{Name}` |  |  |
-| `cd CollegeLMS.Next && npm run build` |  |  |
-| `cd CollegeLMS.Next && npm run check:design-system` |  |  |
-| `cd CollegeLMS.Next && npx playwright test {spec}` |  |  |
+Все команды выполняются из корня worktree. Плейсхолдеры замените на реальные значения; для неприменимой проверки напишите `N/A` и причину.
+
+| cwd | Фактическая команда | Выбрано тестов | Выполнено тестов | Код возврата | Первая ошибка и классификация | Лог |
+|---|---|---|---|---|---|---|
+| `/home/user1/CollegeLMS-w02` | `dotnet build CollegeLMS.slnx` | N/A | N/A |  |  | `logs/build.log` |
+| `/home/user1/CollegeLMS-w02` | `dotnet csharpier check .` | N/A | N/A |  |  | `logs/csharpier.log` |
+| `/home/user1/CollegeLMS-w02` | `dotnet test CollegeLMS.slnx --filter FullyQualifiedName~<ваш фильтр>` |  |  |  |  | `logs/test.log` |
+| `/home/user1/CollegeLMS-w02` | `(cd CollegeLMS.Next && npm run build)` | N/A | N/A |  |  | `logs/frontend-build.log` |
+| `/home/user1/CollegeLMS-w02` | `(cd CollegeLMS.Next && npm run check:design-system)` | N/A | N/A |  |  | `logs/design-system.log` |
+| `/home/user1/CollegeLMS-w02` | `npx playwright test <spec>` | N/A | N/A | N/A | `не запускался: нет изолированного стенда` | — |
 
 ## Пробелы AGENTS.md
 

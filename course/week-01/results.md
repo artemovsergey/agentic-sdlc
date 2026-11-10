@@ -17,6 +17,18 @@
 | Проектные skills |  |  |  |
 | `AGENTS.md` CollegeLMS |  |  |  |
 
+## Журнал аудита
+
+Команды выполняются из корня проекта. Запишите фактическую команду, код возврата и краткий итог; полный вывод сохраните в лог.
+
+| cwd | Фактическая команда | Код возврата | Что показала | Лог |
+|---|---|---|---|---|
+| `/home/user1/CollegeLMS` | `opencode --version` |  |  | `logs/opencode-version.log` |
+| `/home/user1/CollegeLMS` | `opencode models` |  |  | `logs/opencode-models.log` |
+| `/home/user1/CollegeLMS` | `opencode mcp list` |  |  | `logs/opencode-mcp.log` |
+| `/home/user1/CollegeLMS` | `opencode plugin list` |  |  | `logs/opencode-plugins.log` |
+| `/home/user1/CollegeLMS` | `opencode auth list` |  |  | `logs/opencode-auth.log` |
+
 ## Постановка задачи
 
 **Ожидаемое поведение.**
