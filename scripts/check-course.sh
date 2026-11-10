@@ -22,6 +22,8 @@ fi
 if [[ -f course/sources.md ]]; then
   grep -q '2026-11-10' course/sources.md || fail "sources.md: нет даты 2026-11-10"
   grep -q 'OpenCode' course/sources.md || fail "sources.md: нет версии OpenCode"
+  grep -q 'BB' course/sources.md || fail "sources.md: нет BB в основном стеке"
+  grep -q 'OpenCode Go' course/sources.md || fail "sources.md: нет провайдера OpenCode Go"
 fi
 
 for week in course/week-01 course/week-02; do
@@ -58,6 +60,7 @@ done
 
 if [[ -f course/week-01/practice.md ]]; then
   grep -q 'Резервный сценарий' course/week-01/practice.md || fail "week-01/practice.md: нет готового резервного сценария"
+  grep -q 'bb --version' course/week-01/practice.md || fail "week-01/practice.md: аудит не включает BB"
 fi
 
 if [[ -f course/week-02/practice.md ]]; then

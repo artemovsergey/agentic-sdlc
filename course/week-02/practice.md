@@ -9,7 +9,7 @@
 
 ## Шаги
 
-1. **Worktree.** Создайте отдельный worktree CollegeLMS вне прод-каталога и работайте только в нём:
+1. **Worktree.** Создайте отдельный worktree CollegeLMS вне прод-каталога и работайте только в нём. Если работаете в BB, worktree обычно создаётся вместе с тредом; ручной вариант:
 
    ```bash
    git -C /home/user1/CollegeLMS worktree add /home/user1/CollegeLMS-w02 -b feat/week-02-practice

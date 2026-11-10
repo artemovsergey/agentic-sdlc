@@ -8,7 +8,10 @@
 
 | Компонент | Что установлено | Версия / путь | Замечание |
 |---|---|---|---|
+| BB |  |  |  |
+| Окружение BB |  |  |  |
 | OpenCode |  |  |  |
+| Провайдер | OpenCode Go |  |  |
 | Модель по умолчанию |  |  |  |
 | Агенты |  |  |  |
 | MCP |  |  |  |
@@ -23,6 +26,8 @@
 
 | cwd | Фактическая команда | Код возврата | Что показала | Лог |
 |---|---|---|---|---|
+| `/home/user1/CollegeLMS` | `bb --version` |  |  | `logs/bb-version.log` |
+| `/home/user1/CollegeLMS` | `bb status` |  |  | `logs/bb-status.log` |
 | `/home/user1/CollegeLMS` | `opencode --version` |  |  | `logs/opencode-version.log` |
 | `/home/user1/CollegeLMS` | `opencode models` |  |  | `logs/opencode-models.log` |
 | `/home/user1/CollegeLMS` | `opencode mcp list` |  |  | `logs/opencode-mcp.log` |
