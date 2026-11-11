@@ -1,0 +1,15 @@
+course:
+  code: "Agentic SDLC"
+  title: "Разработка через агентов"
+  specialty: ""
+  group: ""
+  year: "2026/2027"
+  teacher: ""
+  repo_slug: "agentic-sdlc"
+  layout: "weeks"
+build:
+  docx: true
+  pdf: true
+  pptx: true
+  figures: true
+  book: false
