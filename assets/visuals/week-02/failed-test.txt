@@ -1,0 +1,19 @@
+$ dotnet test --nologo
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  StudentFilterTests -> /tmp/student-filter-demo/bin/Debug/net10.0/StudentFilterTests.dll
+Test run for /tmp/student-filter-demo/bin/Debug/net10.0/StudentFilterTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.44]     CollegeLms.Tests.StudentFilterTests.Filters_by_group [FAIL]
+  Failed CollegeLms.Tests.StudentFilterTests.Filters_by_group [14 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 3
+Actual:   4
+  Stack Trace:
+     at CollegeLms.Tests.StudentFilterTests.Filters_by_group() in /tmp/student-filter-demo/StudentFilterTes...
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     1, Passed:     6, Skipped:     0, Total:     7, Duration: 79 ms - StudentFilterTests...
